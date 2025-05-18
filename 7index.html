@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        body{
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/029/470/675/small/ai-generated-ai-generative-purple-pink-color-sunset-evening-nature-outdoor-lake-with-mountains-landscape-background-graphic-art-photo.jpg");
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+           
+        }
+        .ter{
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px  rgba(0,0,0,0.1);
+    width:600px;
+
+        }
+        .logo{
+            margin-bottom: 40px;
+            
+
+        }
+        .logo a{
+            text-decoration: none;
+        }
+        .logo a:hover{
+            text-decoration: underline;
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="email"],[type="password"]{
+            width: 100%;
+            padding:10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid rgb(166, 145, 145);
+            outline:none;
+        }
+input:focus{
+    border:2px solid blue;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+
+    
+}
+.forgotpassword{
+    text-decoration: none;
+}
+.forgotpassword:hover{
+    text-decoration: underline;
+
+}
+.signin-button{
+    width:100%;
+    padding:15px;
+    background-color: #007bff;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+.signin-button:hover{
+    background-color: blue;
+
+}
+.or{
+    display:flex;
+    align-items: center;
+    margin:20x 0;
+padding:15px;
+
+}
+.line{
+    flex:1;
+    height:2px;
+    background-color: #ddd;
+
+}
+.or-text{
+    margin: 0 10px;
+
+}
+.google-button{
+    width: 100%;
+    padding:15px;
+    background-color: white;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.google-button img{
+    width:30px;
+    margin-right: 10px;
+
+}
+
+        
+        
+    </STYLE>
+</head>
+<body>
+    <div class="ter">
+        <h1>Sign in</h1>
+        
+            <p class="logo">Don't have an account?
+                <a href="#">register here</a>
+                </p>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password"> 
+                    <div class="option">
+                        <label>
+                        <input type="checkbox" name="remeber-me">Remeber-me</label>
+                        <a href="#" class="forgotpassword">forgot password</a>
+                    </div>
+                    <button type="submitt" class="signin-button">sign in</button>
+
+                </form>
+                <div class="or">
+                    <span class="line"></span>
+                    <span class="or-text">OR</span>
+                    <span class="line"></span>
+                </div>
+                <button class="google-button">
+                    <image src="https://image.similarpng.com/file/similarpng/very-thumbnail/2020/06/Logo-google-icon-PNG.png" alt="google logo"> continue in google</image>
+                </button> 
+        
+    </div>
+    
+</body>
+</html>

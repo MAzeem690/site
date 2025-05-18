@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jindo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    background-color: black;
+    border-radius: 6px;
+    height: 60px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 50px;
+    font-size: 20px;
+    
+}
+.navbar a:hover {
+    color: #00ff99;
+    text-decoration: underline;
+}
+.getintouch {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.getintouch:hover {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;}
+    .header {
+        background-color: #2c3e50;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .conference {
+        background-color:orange;
+        padding: 5px 10px;
+        color:black;
+        border-radius: 4px;
+        margin-right: 39px;
+        transition: 0.5s;
+        text-decoration: none;
+        margin-left: 40px;
+    }
+    .conference:hover{
+        background-color:white;
+        cursor: pointer;
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        
+    }
+    .info span {
+        display: flex;
+        align-items: center;
+        
+        margin-right: 180px;
+    }
+
+.social-icons a {
+        color: white;
+        margin-left: 15px;
+        font-size: 30px;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: orange;
+    } 
+    .wavelength-case-study {
+  background-color: #fff;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.wavelength-case-study .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wavelength-case-study h2 {
+  font-size: 50px;
+  font-weight: 700; 
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.wavelength-case-study p {
+  font-size: 20px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.case-study-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.case-study-image img:hover {
+  transform: scale(1.02);
+}
+.carbonteq-solutions {
+  background-color: #0d0d0d;
+  color: #f4f4f4;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.carbonteq-solutions .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.solution-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.solution-left,
+.solution-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.solution-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.solution-left .highlight {
+  color: #ffffff;
+}
+
+.solution-left p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.solution-right ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.solution-right li {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.solution-right strong {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .solution-wrapper {
+    flex-direction: column;
+  }
+
+  .solution-left, .solution-right {
+    text-align: left;
+  }
+}
+.cn{
+    padding: 15px 30px;
+        font-size: 30px;
+        border-radius: 50px;
+        border: none;
+        background-color:orange;
+        color: white;
+        font-family: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        width:300px;
+        height:100px;
+        
+}
+.cn a{
+    text-decoration:none;
+    color:#000;
+    transition: 0.3s;
+
+}
+.cn:hover{
+    background-color:whitesmoke;}
+    .footer {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        padding: 50px 20px;
+      }
+      
+      .footer-container {
+        max-width:1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .footer-section {
+        flex: 1 1 250px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info p {
+        max-width: 300px;
+      }
+      
+      .badges img {
+        height: 60px;
+        margin-right: 10px;
+      }
+      
+      .footer-nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-nav li {
+        margin-bottom: 5px;
+      }
+      
+      .footer-nav a {
+          font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .footer-nav a:hover {
+          color:#00ff99;
+        text-decoration: underline;
+      }
+      
+      .contact-info p {
+        margin: 10px 0;
+      }
+      
+      .contact-info a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      
+      .social-icons img {
+        width: 50px;
+        margin-right:10px;
+        
+      }
+      .social-icons img:hover{
+        background-color: orange;
+      }    
+    
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="conference">Software House</div>
+        <div class="info">
+            <span>📞 UAN - 0336477054</span>
+            <span>📧 info@webdevolpetraining.com</span>
+            <span>💬 0334-0140542</span>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/923340140542" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        </div>
+    
+    <div class="navbar">
+        <div style="font-size: 30px; margin-left: 40px; border-radius: 4px; color:white; font-weight: bold;">carborteq</div>
+        <div>
+            <a href="10index.html">Home</a>
+            <a href="11index.html">About</a>
+            <a href="14index.html">Portfolio</a>
+            <a href="12index.html">Services</a>
+            <a href="13index.html">Careers</a>
+            <button class="getintouch">Get in touch</button> 
+        </div>  
+    </div> 
+    <section class="wavelength-case-study">
+        <div class="container">
+          <h2>jindo</h2>
+          <p>
+            An innovative platform designed to bridge the gap between alumni and their alma mater, 
+            ensuring seamless connections, easy outreach, and personalized experiences.
+          </p>
+          <div class="case-study-image">
+            <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29df2_iPhoneXs-003%201%20(3).png" alt="Wavelength UI Screenshots">
+          </div>
+        </div>
+      </section>
+      <section class="carbonteq-solutions">
+        <div class="container">
+          <div class="solution-wrapper">
+            <div class="solution-left">
+              <h2>Solution Provided by <br><span class="highlight">Carbonteq</span></h2>
+              <p>
+                In response to MoonRock’s challenges, Carbonteq crafted a tech masterpiece.
+                The pivotal solutions rolled out were:
+              </p>
+            </div>
+            <div class="solution-right">
+              <ul>
+                <li>
+                  <strong>Custom Mobile Application:</strong>
+                  Tailored to MoonRock’s specifications, this app became the hub for rent collection, 
+                  maintenance requests, and multi-property management.
+                </li>
+                <li>
+                  <strong>Third-Party Integrations:</strong>
+                  Seamless integration of payment systems, facilitating online transactions and enhancing 
+                  user convenience.
+                </li>
+                <li>
+                  <strong>Collaborative Development Journey:</strong>
+                  Bi-weekly meetings ensured synchronized efforts, real-time feedback, and feature optimization.
+                </li>
+                <li>
+                  <strong>Swift Execution:</strong>
+                  Carbonteq’s efficiency saw the app’s development completed in a mere 8 weeks, 
+                  fast-tracking MoonRock’s beta testing phase.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <center><button class="cn"><a href="#">CONTACT US </a></button></center>
+
+      <footer class="footer">
+    
+    
+        <div class="footer-container">
+          
+        
+          <div class="footer-section company-info">
+            <h2>Carbonteq</h2>
+            <p>We help organizations, at any business stage, to accelerate their digital journey.</p>
+            <div class="badges">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e73_top_clutch.co_web_developers_pakistan_2023%2520(1)-p-500.png" alt="Clutch Badge">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e25_bjhgjh.png" alt="Top App Developers">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e75_top_clutch.co_reactjs_developers_pakistan_2023%2520(1)-p-500.png" alt="Software World">
+            </div>
+          </div>
+    
+          
+          <div class="footer-section footer-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+    
+          
+          <div class="footer-section contact-info">
+            <p><strong>Address:</strong><br>
+              Building Number 6,<br>
+              Sector B, DHA Phase 5,<br>
+              Lahore, Pakistan</p>
+            <p><strong>Phone:</strong> (+92) 3178810411</p>
+            <p><strong>Email:</strong> <a href="majraazeem4567@gmail.com">info@carbonteq.com</a></p>
+            <div class="social-icons">
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e09_Group%206967.svg" alt="LinkedIn"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e06_Group%2020542%20(1).svg" alt="Facebook"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29dfe_Group%2020543.svg" alt="Twitter"></a>
+            </div>
+          </div>
+    
+        </div>
+      </footer>   
+    
+</body>
+</html>

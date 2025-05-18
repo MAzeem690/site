@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Ambassador 2025 - Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea, select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 60%;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #555;
+    }
+    .captcha {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      background: #000;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .submit-btn:hover {
+      background: #333;
+    }
+    .container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left, .right {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.location {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="container">
+    <div class="left">
+      <h1>Campus Ambassador 2025</h1>
+      <p class="location">📍 Lahore, Punjab, Pakistan | Seasonal | Human Resources | Student (College)</p>
+
+      <section>
+        <h2>Job Description:</h2>
+        <p>Are you an energetic student who loves <strong>event planning</strong>, <strong>marketing</strong>, and <strong>meeting new people</strong>? <strong>Carbonteq</strong> is looking for <strong>Campus Ambassadors</strong> to represent us at your university!</p>
+        <p>As a Campus Ambassador, you’ll help promote <strong>Carbonteq’s events, workshops</strong>, and <strong>opportunities</strong> through social media and on-campus activities.</p>
+      </section>
+
+      <section>
+        <h2>What You'll Get:</h2>
+        <ul>
+          <li>Monthly stipend</li>
+          <li>Experience in <strong>event management, marketing</strong>, and <strong>HR</strong></li>
+          <li><strong>Networking</strong> with professionals and fellow ambassadors</li>
+          <li><strong>Certificate</strong> on completion</li>
+          <li>Resume and career boost</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What You'll Do:</h2>
+        <ul>
+          <li><strong>Social Media:</strong> 2 posts per month</li>
+          <li><strong>Events:</strong> Organize recruitment drives</li>
+          <li><strong>Workshops:</strong> Get 20-25 students to join</li>
+          <li><strong>Promotions:</strong> Share job openings and learning resources</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Monthly Goals:</h2>
+        <ul>
+          <li>2+ Social Media Posts</li>
+          <li>Grow followers by 10-20%</li>
+          <li>Assist in 1 recruitment event per year</li>
+          <li>Get 20-25 attendees per workshop</li>
+        </ul>
+      </section>
+    </div>
+
+
+  <form id="applicationForm">
+
+    <!-- First Part (first image) -->
+    <input type="text" placeholder="First Name *" required>
+    <input type="text" placeholder="Last Name *" required>
+    <input type="email" placeholder="Email Address *" required>
+    <input type="tel" placeholder="Phone *" required>
+
+    <input type="text" placeholder="Address" required>
+    <div style="display: flex; gap: 10px;">
+      <input type="text" placeholder="City" required>
+      <input type="text" placeholder="State/Province" required>
+      <input type="text" placeholder="Postal" required>
+    </div>
+
+    <label>Resume *</label>
+    <input type="file" required>
+
+    <input type="url" placeholder="LinkedIn Profile URL" required>
+
+    <!-- Second Part (second image) -->
+    <textarea placeholder="Which societies/clubs you are part of? *" required></textarea>
+    <input type="text" placeholder="What is your role in the society? *" required>
+    <textarea placeholder="Describe any events you have organized or contributed to. (Include details like event type, number of attendees, your role, etc.)" required></textarea>
+    <input type="number" placeholder="How many hours per week can you dedicate to ambassador activities? *" required>
+    <textarea placeholder="Why do you want to be a Carbonteq Campus Ambassador? (2-5 lines) *" required></textarea>
+
+    <label>Are you comfortable meeting monthly targets related to social media engagement and event participation? *</label>
+    <select required>
+      <option value="">-- No answer --</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Human Check *</label>
+    <div class="captcha">
+      <input type="checkbox" required> I'm not a robot
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Application</button>
+
+  </form>
+
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Application submitted successfully!");
+    });
+  </script>
+
+</body>
+</html>

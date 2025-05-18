@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzlet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+     .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    background-color: black;
+    border-radius: 6px;
+    height: 60px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 50px;
+    font-size: 20px;
+    
+}
+.navbar a:hover {
+    color: #00ff99;
+    text-decoration: underline;
+}
+.getintouch {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.getintouch:hover {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;}
+    .header {
+        background-color: #2c3e50;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .conference {
+        background-color:orange;
+        padding: 5px 10px;
+        color:black;
+        border-radius: 4px;
+        margin-right: 39px;
+        transition: 0.5s;
+        text-decoration: none;
+        margin-left: 40px;
+    }
+    .conference:hover{
+        background-color:white;
+        cursor: pointer;
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        
+    }
+    .info span {
+        display: flex;
+        align-items: center;
+        
+        margin-right: 180px;
+    }
+
+.social-icons a {
+        color: white;
+        margin-left: 15px;
+        font-size: 30px;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: orange;
+    } 
+    .feature-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.feature-content {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.feature-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.feature-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.feature-image {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+.story-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.story-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.story-content .emoji {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .story-content h2 {
+    font-size: 1.8rem;
+  }
+}
+.solution-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.solution-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.solution-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.solution-features .feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.solution-features img {
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+}
+
+.solution-features p {
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.solution-features code {
+  background-color: #222;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #ffde80;
+}
+
+@media (max-width: 768px) {
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.cn{
+    padding: 15px 30px;
+        font-size: 30px;
+        border-radius: 50px;
+        border: none;
+        background-color:orange;
+        color: white;
+        font-family: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        width:300px;
+        height:100px;
+        
+}
+.cn a{
+    text-decoration:none;
+    color:#000;
+    transition: 0.3s;
+
+}
+.cn:hover{
+    background-color:whitesmoke;}
+    .footer {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        padding: 50px 20px;
+      }
+      
+      .footer-container {
+        max-width:1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .footer-section {
+        flex: 1 1 250px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info p {
+        max-width: 300px;
+      }
+      
+      .badges img {
+        height: 60px;
+        margin-right: 10px;
+      }
+      
+      .footer-nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-nav li {
+        margin-bottom: 5px;
+      }
+      
+      .footer-nav a {
+          font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .footer-nav a:hover {
+          color:#00ff99;
+        text-decoration: underline;
+      }
+      
+      .contact-info p {
+        margin: 10px 0;
+      }
+      
+      .contact-info a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      
+      .social-icons img {
+        width: 50px;
+        margin-right:10px;
+        
+      }
+      .social-icons img:hover{
+        background-color: orange;
+      }    
+</style>
+</head>
+<body>
+    <div class="header">
+    <div class="conference">Software House</div>
+    <div class="info">
+        <span>📞 UAN - 0336477054</span>
+        <span>📧 info@webdevolpetraining.com</span>
+        <span>💬 0334-0140542</span>
+    </div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/923340140542" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    </div>
+
+<div class="navbar">
+    <div style="font-size: 30px; margin-left: 40px; border-radius: 4px; color:white; font-weight: bold;">carborteq</div>
+    <div>
+        <a href="10index.html">Home</a>
+        <a href="11index.html">About</a>
+        <a href="14index.html">Portfolio</a>
+        <a href="12index.html">Services</a>
+        <a href="13index.html">Careers</a>
+        <button class="getintouch">Get in touch</button> 
+    </div>  
+</div>
+<section class="feature-section">
+    <div class="feature-content">
+      <h2>Revolutionizing Prompt Management and Observability with Puzzlet AI</h2>
+      <p>
+        Puzzlet AI empowers teams to streamline their Generative AI workflows with Git-based prompt management, 
+        detailed traceability, and actionable analytics, fostering efficiency and collaboration.
+      </p>
+    </div>
+    <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b72211d183d39b8cb5ab37_Cover.svg" alt="Puzzlet AI UI" class="feature-image" />
+  </section>
+  <section class="story-section">
+    <div class="story-grid">
+      <div class="story-image">
+        <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b703601749190486ec1b34_puzzlet.png" alt="Puzzlet story illustration" />
+      </div>
+      <div class="story-content">
+        <h2>Story of Puzzlet <span class="emoji">🤞</span></h2>
+        <p>
+          Puzzlet AI, led by founder Ryan Randall, is a platform designed to address critical challenges in 
+          Generative AI workflows. With its tools, users can manage prompts directly in GitHub, decouple prompts 
+          from code for model-independent workflows, and analyze performance metrics to enhance operational efficiency.
+        </p>
+        <p>
+          However, Puzzlet envisioned a groundbreaking solution to bridge gaps in the AI development space: 
+          a comprehensive platform that could integrate seamlessly with existing workflows, support diverse LLM models, 
+          and foster collaboration between technical and non-technical contributors. At the time, no such solution existed in the market.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="solution-section">
+    <div class="solution-grid">
+      <div class="solution-intro">
+        <h2>Solution Provided by Carbonteq</h2>
+        <p>
+          Recognizing Puzzlet AI’s unique requirements, Carbonteq designed and implemented a scalable, 
+          feature-rich platform that addressed these challenges.
+        </p>
+      </div>
+      <div class="solution-features">
+        <div class="feature">
+          <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b7080ede667cb6f2600c1d_Circle-Button%20(1).png" alt="Puzzle icon" />
+          <p>
+            <strong>Git-Based Prompt Management:</strong> Integrated GitHub with the app, automatically versioning 
+            prompts via Git commits. Users can write prompts in markdown, making them easy to read and format.
+            There’s also an option to create reusable components easily imported into any prompt.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b7080ede667cb6f2600c1d_Circle-Button%20(1).png" alt="Puzzle icon" />
+          <p>
+            <strong>Prompt Tracking:</strong> Created open-source tools like <code>@puzzlet/agentmark</code>, 
+            <code>@puzzlet/sdk</code>, and <code>@puzzlet/templatedx</code> for component resolution inside prompts.
+            Leveraged OpenTelemetry, Vercel’s AI SDK, and ClickHouse for tracking and efficient storage.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b7080ede667cb6f2600c1d_Circle-Button%20(1).png" alt="Puzzle icon" />
+          <p>
+            <strong>Advanced Analytics:</strong> Integrated ClickHouse and Cube.js for performance insights 
+            with user-friendly visualizations.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/67b7080ede667cb6f2600c1d_Circle-Button%20(1).png" alt="Puzzle icon" />
+          <p>
+            <strong>Collaboration Tools:</strong> Enabled role-based access and team permissions. 
+            No GitHub logins required for non-technical contributors — smooth team workflows!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <center><button class="cn"><a href="#">CONTACT US </a></button></center>
+
+      <footer class="footer">
+    
+    
+        <div class="footer-container">
+          
+        
+          <div class="footer-section company-info">
+            <h2>Carbonteq</h2>
+            <p>We help organizations, at any business stage, to accelerate their digital journey.</p>
+            <div class="badges">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e73_top_clutch.co_web_developers_pakistan_2023%2520(1)-p-500.png" alt="Clutch Badge">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e25_bjhgjh.png" alt="Top App Developers">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e75_top_clutch.co_reactjs_developers_pakistan_2023%2520(1)-p-500.png" alt="Software World">
+            </div>
+          </div>
+    
+          
+          <div class="footer-section footer-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+    
+          
+          <div class="footer-section contact-info">
+            <p><strong>Address:</strong><br>
+              Building Number 6,<br>
+              Sector B, DHA Phase 5,<br>
+              Lahore, Pakistan</p>
+            <p><strong>Phone:</strong> (+92) 3178810411</p>
+            <p><strong>Email:</strong> <a href="majraazeem4567@gmail.com">info@carbonteq.com</a></p>
+            <div class="social-icons">
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e09_Group%206967.svg" alt="LinkedIn"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e06_Group%2020542%20(1).svg" alt="Facebook"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29dfe_Group%2020543.svg" alt="Twitter"></a>
+            </div>
+          </div>
+    
+        </div>
+      </footer>   
+    
+    
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeycomb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    background-color: black;
+    border-radius: 6px;
+    height: 60px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 50px;
+    font-size: 20px;
+    
+}
+.navbar a:hover {
+    color: #00ff99;
+    text-decoration: underline;
+}
+.getintouch {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.getintouch:hover {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;}
+    .header {
+        background-color: #2c3e50;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .conference {
+        background-color:orange;
+        padding: 5px 10px;
+        color:black;
+        border-radius: 4px;
+        margin-right: 39px;
+        transition: 0.5s;
+        text-decoration: none;
+        margin-left: 40px;
+    }
+    .conference:hover{
+        background-color:white;
+        cursor: pointer;
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        
+    }
+    .info span {
+        display: flex;
+        align-items: center;
+        
+        margin-right: 180px;
+    }
+
+.social-icons a {
+        color: white;
+        margin-left: 15px;
+        font-size: 30px;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: orange;
+    } 
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    .hero-image {
+      margin-top: 40px;
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+    .story-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 60px 20px;
+    }
+    .video-container {
+      flex: 1 1 480px;
+      max-width: 560px;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
+    .story-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+    .story-text h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .story-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 768px) {
+      .story-text h2 {
+        font-size: 1.5rem;
+      }
+      .story-text p {
+        font-size: 1rem;
+      }
+    }
+    .carbonteq-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #0d0d0d;
+ background-image: radial-gradient(white 1px, transparent 1px),url(data:image/jpeg;base64,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);
+  background-size: 40px 40px;
+  color: #ffffff;
+}
+
+.carbonteq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.carbonteq-left, .carbonteq-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.carbonteq-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.carbonteq-left h1 span {
+  display: block;
+  font-weight: bold;
+}
+
+.carbonteq-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.carbonteq-right ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.carbonteq-right li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.carbonteq-right li b {
+  font-weight: bold;
+}
+.results-section {
+  width: 100%;
+  height:100hv;
+  background-color: #f2f2f2;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+}
+
+.results-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.results-container h2 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:black;
+}
+
+.results-container h2 span {
+  margin-left: 10px;
+}
+
+.results-container p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.results-table {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.result-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.result-title {
+  font-weight: 600;
+  width: 40%;
+}
+
+.result-description {
+  width: 55%;
+  font-size: 18px;
+}
+.cn{
+    padding: 15px 30px;
+        font-size: 30px;
+        border-radius: 50px;
+        border: none;
+        background-color:orange;
+        color: white;
+        font-family: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        width:300px;
+        height:100px;
+        
+}
+.cn a{
+    text-decoration:none;
+    color:#000;
+    transition: 0.3s;
+
+}
+.cn:hover{
+    background-color:whitesmoke;}
+    .footer {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        padding: 50px 20px;
+      }
+      
+      .footer-container {
+        max-width:1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .footer-section {
+        flex: 1 1 250px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .company-info p {
+        max-width: 300px;
+      }
+      
+      .badges img {
+        height: 60px;
+        margin-right: 10px;
+      }
+      
+      .footer-nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-nav li {
+        margin-bottom: 5px;
+      }
+      
+      .footer-nav a {
+          font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .footer-nav a:hover {
+          color:#00ff99;
+        text-decoration: underline;
+      }
+      
+      .contact-info p {
+        margin: 10px 0;
+      }
+      
+      .contact-info a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      
+      .social-icons img {
+        width: 50px;
+        margin-right:10px;
+        
+      }
+      .social-icons img:hover{
+        background-color: orange;
+      }    
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="conference">Software House</div>
+        <div class="info">
+            <span>📞 UAN - 0336477054</span>
+            <span>📧 info@webdevolpetraining.com</span>
+            <span>💬 0334-0140542</span>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/923340140542" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        </div>
+    
+    <div class="navbar">
+        <div style="font-size: 30px; margin-left: 40px; border-radius: 4px; color:white; font-weight: bold;">carborteq</div>
+        <div>
+            <a href="10index.html">Home</a>
+            <a href="11index.html">About</a>
+            <a href="14index.html">Portfolio</a>
+            <a href="12index.html">Services</a>
+            <a href="13index.html">Careers</a>
+            <button class="getintouch">Get in touch</button> 
+        </div>  
+    </div> 
+    <section class="hero">
+        <h1>Honeycomb Credit Case Study</h1>
+        <p>
+          An innovative web application to empower small businesses to connect with loyal customers and investors for seamless crowdfunded small business loans.
+        </p>
+        <img class="hero-image" src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e46_Group%252020773-p-1600.png" alt="Honeycomb Credit UI Screens">
+      </section>
+      <section class="story-section">
+    <div class="video-container">
+      
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      
+    </div>
+    <div class="story-text">
+      <h2>The Story of Honeycomb 🤘</h2>
+      <p>
+        Honeycomb Credit, a trailblazer in community-based financing, has been instrumental in helping local businesses access essential growth funds. The platform has democratized investment, allowing individuals to support their favorite local establishments.
+      </p>
+      <p>
+        Facilitating over <strong>$13.25 Million</strong> in investments, they’ve supported <strong>1,142 jobs</strong> and spurred businesses to a remarkable <strong>60% YoY growth</strong> post-investment.
+      </p>
+      <p>
+        To supercharge their platform, they turned to CarbonTeq—seeking to elevate operations, optimize user experience, and amplify impact for investors and creditors.”
+      </p>
+    </div>
+  </section>
+  <section class="carbonteq-section">
+    <div class="carbonteq-container">
+      <div class="carbonteq-left">
+        <h1>Solution Provided by <span>CarbonTeq</span></h1>
+        <p>
+          Understanding Honeycomb Credit’s pain points, CarbonTeq partnered with them to craft a platform customized to their unique requirements. This alliance brought forth transformative enhancements, encompassing:
+        </p>
+      </div>
+      <div class="carbonteq-right">
+        <ul>
+          <li><b>Enhanced User Experience:</b> A complete overhaul of the user interface, making investment processes more user-friendly.</li>
+          <li><b>Swift Investment Times:</b> CarbonTeq’s optimizations drastically reduced the time taken for investment completions.</li>
+          <li><b>Workforce Automation:</b> Manual tasks were automated, streamlining operations and improving efficiency.</li>
+          <li><b>Customization Capabilities:</b> New features enabled better branding and user personalization, elevating the platform’s appeal.</li>
+          <li><b>Comprehensive Admin and Investor Portals:</b> Consolidated data views provided clarity and insights for various stakeholders.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="results-section">
+    <div class="results-container">
+      <h2>The Results <span>🤘</span></h2>
+      <p>CarbonTeq’s solutions brought transformative results for Honeycomb Credit:</p>
+  
+      <div class="results-table">
+        <div class="result-row">
+          <div class="result-title">Superior User Experience</div>
+          <div class="result-description">The platform became more intuitive, enhancing user satisfaction.</div>
+        </div>
+        <div class="result-row">
+          <div class="result-title">Efficient Investment Process</div>
+          <div class="result-description">Investors experienced faster and smoother transactions.</div>
+        </div>
+        <div class="result-row">
+          <div class="result-title">Streamlined Operations</div>
+          <div class="result-description">Automation led to significant time and effort savings.</div>
+        </div>
+        <div class="result-row">
+          <div class="result-title">Personalized User Engagement</div>
+          <div class="result-description">Enhanced customization options provided a unique platform experience.</div>
+        </div>
+        <div class="result-row">
+          <div class="result-title">Data-Driven Insights</div>
+          <div class="result-description">Consolidated data views enabled informed decision-making.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <center><button class="cn"><a href="#">CONTACT US </a></button></center>
+
+      <footer class="footer">
+    
+    
+        <div class="footer-container">
+          
+        
+          <div class="footer-section company-info">
+            <h2>Carbonteq</h2>
+            <p>We help organizations, at any business stage, to accelerate their digital journey.</p>
+            <div class="badges">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e73_top_clutch.co_web_developers_pakistan_2023%2520(1)-p-500.png" alt="Clutch Badge">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e25_bjhgjh.png" alt="Top App Developers">
+              <img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e75_top_clutch.co_reactjs_developers_pakistan_2023%2520(1)-p-500.png" alt="Software World">
+            </div>
+          </div>
+    
+          
+          <div class="footer-section footer-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+    
+          
+          <div class="footer-section contact-info">
+            <p><strong>Address:</strong><br>
+              Building Number 6,<br>
+              Sector B, DHA Phase 5,<br>
+              Lahore, Pakistan</p>
+            <p><strong>Phone:</strong> (+92) 3178810411</p>
+            <p><strong>Email:</strong> <a href="majraazeem4567@gmail.com">info@carbonteq.com</a></p>
+            <div class="social-icons">
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e09_Group%206967.svg" alt="LinkedIn"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29e06_Group%2020542%20(1).svg" alt="Facebook"></a>
+              <a href="#"><img src="https://cdn.prod.website-files.com/66e3fc0ead389c7ea9c29d6e/66e3fc0ead389c7ea9c29dfe_Group%2020543.svg" alt="Twitter"></a>
+            </div>
+          </div>
+    
+        </div>
+      </footer>   
+    
+</body>
+</html>
